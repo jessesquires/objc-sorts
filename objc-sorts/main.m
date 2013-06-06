@@ -7,11 +7,56 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "merge_sort.h"
+#import "quick_sort.h"
+
+#define MAX_COUNT 3000
+
+NSMutableArray* randomNumbersArray()
+{
+    NSMutableArray *list = [[NSMutableArray alloc] init];
+    
+    for(NSUInteger i = 0; i < MAX_COUNT; i++) {
+        int num = arc4random() % INT16_MAX;
+        BOOL sign = ((arc4random() % 2) + 1) % 2 == 0;
+        num *= (sign ? -1 : 1);
+        [list addObject:[NSNumber numberWithInteger:num]];
+    }
+    
+    return list;
+}
+
+BOOL verfiySorted(NSMutableArray *arr)
+{
+    NSLog(@"Verifying sorted list...");
+    for(NSUInteger i = 0; i < arr.count-1; i++) {
+        NSInteger a = [[arr objectAtIndex:i] integerValue];
+        NSInteger b = [[arr objectAtIndex:i+1] integerValue];
+        if(a > b) {
+            NSLog(@"List is NOT sorted!");
+            return NO;
+        }
+    }
+    
+    NSLog(@"List is sorted!");
+    return YES;
+}
 
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
-        NSLog(@"Hello, World!");
+        NSLog(@"Generating random list of %d numbers...", MAX_COUNT);
+        NSMutableArray *unsorted = randomNumbersArray();
+        verfiySorted(unsorted);
+        
+        NSLog(@"\n\nRunning quick sort...");
+        NSMutableArray *qsarr = [unsorted mutableCopy];
+        quick_sort(qsarr, 0, qsarr.count - 1);
+        verfiySorted(qsarr);
+        
+        NSLog(@"\n\nRunning merge sort...");
+        NSMutableArray *msarr = merge_sort(unsorted);
+        verfiySorted(msarr);
     }
     return 0;
 }
