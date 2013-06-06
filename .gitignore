@@ -1,0 +1,5 @@
+.DS_Store
+
+/build/
+objc-sorts.xcodeproj/project.xcworkspace/
+objc-sorts.xcodeproj/xcuserdata/jesse.xcuserdatad/
