@@ -1,5 +1,5 @@
 //
-//  mergesort.h
+//  merge_sort.h
 //  objc-sorts
 //
 //  Created by Jesse Squires on 6/6/13.
