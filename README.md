@@ -7,12 +7,13 @@ A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objec
 2. Each sorting algorithm is executed on a list of 10,000 randomly generated numbers
 3. Each sorted list is verified
 4. Execution time for each algorithm is logged
-5. You can find cool sorting animations [here](http://www.sorting-algorithms.com)
+5. You can find sweet sorting animations [here](http://www.sorting-algorithms.com)
 
 ## Algorithms
 
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
 * [Merge Sort](http://en.wikipedia.org/wiki/Merge_sort)
+* [Insertion Sort](http://en.wikipedia.org/wiki/Insertion_sort)
 * [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
 * [Bubble Sort](http://en.wikipedia.org/wiki/Bubble_sort)
 * *More coming soon!*

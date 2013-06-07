@@ -10,6 +10,7 @@
 #import "merge_sort.h"
 #import "quick_sort.h"
 #import "selection_sort.h"
+#import "insertion_sort.h"
 #import "bubble_sort.h"
 
 #define MAX_COUNT 10000
@@ -24,7 +25,6 @@ NSMutableArray* randomNumbersArray()
         num *= (sign ? -1 : 1);
         [list addObject:[NSNumber numberWithInteger:num]];
     }
-    
     return list;
 }
 
@@ -35,7 +35,7 @@ BOOL verfiySorted(NSMutableArray *arr)
         NSInteger a = [[arr objectAtIndex:i] integerValue];
         NSInteger b = [[arr objectAtIndex:i+1] integerValue];
         if(a > b) {
-            NSLog(@"List is NOT sorted!");
+            NSLog(@"** List is NOT sorted! **");
             return NO;
         }
     }
@@ -50,9 +50,12 @@ int main(int argc, const char * argv[])
         NSMutableArray *unsorted = randomNumbersArray();
         verfiySorted(unsorted);
         
+        
+        NSLog(@"SORT ALL THE THINGS!");
         NSDate *start = nil;
         NSTimeInterval end = 0;
         NSMutableArray *copy = nil;
+        
         
         NSLog(@"\n\nRunning quick sort...");
         copy = [unsorted mutableCopy];
@@ -70,6 +73,15 @@ int main(int argc, const char * argv[])
         end = [start timeIntervalSinceNow] * -1;
         verfiySorted(copy);
         NSLog(@"Merge sort DONE: %lf", end);
+        
+        
+        NSLog(@"\n\nRunning insertion sort...");
+        copy = [unsorted mutableCopy];
+        start = [NSDate date];
+        insertion_sort(copy);
+        end = [start timeIntervalSinceNow] * -1;
+        verfiySorted(copy);
+        NSLog(@"Insertion sort DONE: %lf", end);
         
         
         NSLog(@"\n\nRunning selection sort...");
