@@ -20,11 +20,8 @@ void selection_sort(NSMutableArray *arr)
                 minIndex = j;
         }
         
-        if(minIndex != i) {
-            NSNumber *temp = [arr objectAtIndex:i];
-            [arr replaceObjectAtIndex:i withObject:[arr objectAtIndex:minIndex]];
-            [arr replaceObjectAtIndex:minIndex withObject:temp];
-        }
+        if(minIndex != i)
+            [arr exchangeObjectAtIndex:i withObjectAtIndex:minIndex];
     }
 }
 
