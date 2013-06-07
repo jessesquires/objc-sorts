@@ -7,41 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "sort_utils.h"
 #import "merge_sort.h"
 #import "quick_sort.h"
 #import "selection_sort.h"
 #import "insertion_sort.h"
 #import "bubble_sort.h"
-
-#define MAX_COUNT 10000
-
-NSMutableArray* randomNumbersArray()
-{
-    NSMutableArray *list = [[NSMutableArray alloc] init];
-    
-    for(NSUInteger i = 0; i < MAX_COUNT; i++) {
-        int num = arc4random() % INT16_MAX;
-        BOOL sign = ((arc4random() % 2) + 1) % 2 == 0;
-        num *= (sign ? -1 : 1);
-        [list addObject:[NSNumber numberWithInteger:num]];
-    }
-    return list;
-}
-
-BOOL verfiySorted(NSMutableArray *arr)
-{
-    NSLog(@"Verifying sorted list...");
-    for(NSUInteger i = 0; i < arr.count-1; i++) {
-        NSInteger a = [[arr objectAtIndex:i] integerValue];
-        NSInteger b = [[arr objectAtIndex:i+1] integerValue];
-        if(a > b) {
-            NSLog(@"** List is NOT sorted! **");
-            return NO;
-        }
-    }
-    NSLog(@"List is sorted!");
-    return YES;
-}
 
 int main(int argc, const char * argv[])
 {
@@ -50,56 +21,18 @@ int main(int argc, const char * argv[])
         NSMutableArray *unsorted = randomNumbersArray();
         verfiySorted(unsorted);
         
-        
         NSLog(@"SORT ALL THE THINGS!");
-        NSDate *start = nil;
-        NSTimeInterval end = 0;
-        NSMutableArray *copy = nil;
+        NSLog(@"--------------------");
         
+        test_quick_sort([unsorted mutableCopy]);
         
-        NSLog(@"\n\nRunning quick sort...");
-        copy = [unsorted mutableCopy];
-        start = [NSDate date];
-        quick_sort(copy, 0, copy.count - 1);
-        end = [start timeIntervalSinceNow] * -1;
-        verfiySorted(copy);
-        NSLog(@"Quick sort DONE: %lf", end);
+        test_merge_sort([unsorted mutableCopy]);
         
+        test_insertion_sort([unsorted mutableCopy]);
         
-        NSLog(@"\n\nRunning merge sort...");
-        copy = [unsorted mutableCopy];
-        start = [NSDate date];
-        merge_sort(copy, 0, copy.count);
-        end = [start timeIntervalSinceNow] * -1;
-        verfiySorted(copy);
-        NSLog(@"Merge sort DONE: %lf", end);
+        test_selection_sort([unsorted mutableCopy]);
         
-        
-        NSLog(@"\n\nRunning insertion sort...");
-        copy = [unsorted mutableCopy];
-        start = [NSDate date];
-        insertion_sort(copy);
-        end = [start timeIntervalSinceNow] * -1;
-        verfiySorted(copy);
-        NSLog(@"Insertion sort DONE: %lf", end);
-        
-        
-        NSLog(@"\n\nRunning selection sort...");
-        copy = [unsorted mutableCopy];
-        start = [NSDate date];
-        selection_sort(copy);
-        end = [start timeIntervalSinceNow] * -1;
-        verfiySorted(copy);
-        NSLog(@"Selection sort DONE: %lf", end);
-        
-        
-        NSLog(@"\n\nRunning bubble sort...");
-        copy = [unsorted mutableCopy];
-        start = [NSDate date];
-        bubble_sort(copy);
-        end = [start timeIntervalSinceNow] * -1;
-        verfiySorted(copy);
-        NSLog(@"Bubble sort DONE: %lf", end);
+        test_bubble_sort([unsorted mutableCopy]);
     }
     return 0;
 }

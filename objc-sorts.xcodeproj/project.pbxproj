@@ -34,6 +34,7 @@
 		88468977176129B000721B97 /* merge_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merge_sort.h; sourceTree = "<group>"; };
 		88468978176129B000721B97 /* quick_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quick_sort.h; sourceTree = "<group>"; };
 		88468979176169DA00721B97 /* selection_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selection_sort.h; sourceTree = "<group>"; };
+		888879E21762267E0046D781 /* sort_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort_utils.h; sourceTree = "<group>"; };
 		88A0F9D71761897700F818C5 /* bubble_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bubble_sort.h; sourceTree = "<group>"; };
 		88A0F9D817618D1A00F818C5 /* insertion_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertion_sort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +85,7 @@
 				88468977176129B000721B97 /* merge_sort.h */,
 				88468978176129B000721B97 /* quick_sort.h */,
 				88468979176169DA00721B97 /* selection_sort.h */,
+				888879E21762267E0046D781 /* sort_utils.h */,
 				8846896E1761238A00721B97 /* Supporting Files */,
 			);
 			path = "objc-sorts";

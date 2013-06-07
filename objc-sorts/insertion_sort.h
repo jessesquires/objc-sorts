@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Hexed Bits. All rights reserved.
 //
 
+#import "sort_utils.h"
+
 #ifndef objc_sorts_insertion_sort_h
 #define objc_sorts_insertion_sort_h
 
@@ -21,6 +23,16 @@ void insertion_sort(NSMutableArray *arr)
         }
         [arr replaceObjectAtIndex:j withObject:target];
     }
+}
+
+void test_insertion_sort(NSMutableArray *arr)
+{
+    NSLog(@"\n\nRunning insertion sort...");
+    NSDate *start = [NSDate date];
+    insertion_sort(arr);
+    NSTimeInterval end = [start timeIntervalSinceNow] * -1;
+    verfiySorted(arr);
+    NSLog(@"Insertion sort DONE: %lf", end);
 }
 
 #endif

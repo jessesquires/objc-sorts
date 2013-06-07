@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Hexed Bits. All rights reserved.
 //
 
+#import "sort_utils.h"
+
 #ifndef objc_sorts_quicksort_h
 #define objc_sorts_quicksort_h
 
@@ -42,6 +44,16 @@ void quick_sort(NSMutableArray *arr, NSUInteger left, NSUInteger right)
     
     if(index < right)
         quick_sort(arr, index, right);
+}
+
+void test_quick_sort(NSMutableArray *arr)
+{
+    NSLog(@"\n\nRunning quick sort...");
+    NSDate *start = [NSDate date];
+    quick_sort(arr, 0, arr.count - 1);
+    NSTimeInterval end = [start timeIntervalSinceNow] * -1;
+    verfiySorted(arr);
+    NSLog(@"Quick sort DONE: %lf", end);
 }
 
 #endif

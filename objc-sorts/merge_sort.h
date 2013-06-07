@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Hexed Bits. All rights reserved.
 //
 
+#import "sort_utils.h"
+
 #ifndef objc_sorts_mergesort_h
 #define objc_sorts_mergesort_h
 
@@ -54,6 +56,16 @@ void merge_sort(NSMutableArray *arr, NSUInteger first, NSUInteger last)
         merge_sort(arr, mid, last);
         merge(arr, first, mid, last);
     }
+}
+
+void test_merge_sort(NSMutableArray *arr)
+{
+    NSLog(@"\n\nRunning merge sort...");
+    NSDate *start = [NSDate date];
+    merge_sort(arr, 0, arr.count);
+    NSTimeInterval end = [start timeIntervalSinceNow] * -1;
+    verfiySorted(arr);
+    NSLog(@"Merge sort DONE: %lf", end);
 }
 
 #endif
