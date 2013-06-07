@@ -2,6 +2,8 @@
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objective-C.
 
+You can find cool sorting animations [here](http://www.sorting-algorithms.com).
+
 ## Sorts
 
 * [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
