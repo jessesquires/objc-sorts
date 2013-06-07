@@ -11,9 +11,9 @@ A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objec
 
 ### Why does this project exist?
 
-1. Programming is fun
+1. Programming is [fun](http://cdn.memegenerator.net/instances/400x/38499495.jpg)
 
-2. Programmers need practice
+2. Programmers need [practice](http://xkcd.com/844/)
 
 3. Objective-C is awesome, but most sorting implementations that you'll find on the interwebs are written in C/C++, Java, or Python.
 
