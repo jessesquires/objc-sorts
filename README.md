@@ -11,9 +11,10 @@ A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objec
 
 ## Algorithms
 
-* [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
-* [Merge Sort](http://en.wikipedia.org/wiki/Merge_sort)
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
+* [Merge Sort](http://en.wikipedia.org/wiki/Merge_sort)
+* [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
+* [Bubble Sort](http://en.wikipedia.org/wiki/Bubble_sort)
 * *More coming soon!*
 
 ## Why?

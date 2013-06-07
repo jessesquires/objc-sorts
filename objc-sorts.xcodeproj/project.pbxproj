@@ -34,6 +34,7 @@
 		88468977176129B000721B97 /* merge_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merge_sort.h; sourceTree = "<group>"; };
 		88468978176129B000721B97 /* quick_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quick_sort.h; sourceTree = "<group>"; };
 		88468979176169DA00721B97 /* selection_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selection_sort.h; sourceTree = "<group>"; };
+		88A0F9D71761897700F818C5 /* bubble_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bubble_sort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 		8846896B1761238A00721B97 /* objc-sorts */ = {
 			isa = PBXGroup;
 			children = (
+				88A0F9D71761897700F818C5 /* bubble_sort.h */,
 				8846896C1761238A00721B97 /* main.m */,
 				88468977176129B000721B97 /* merge_sort.h */,
 				88468978176129B000721B97 /* quick_sort.h */,
