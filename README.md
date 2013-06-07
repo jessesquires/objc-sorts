@@ -1,9 +1,10 @@
 # objc-sorts
 
-A collection of sorting algorithms implemented in Objective-C.
+A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objective-C.
 
 ## Sorts
 
+* [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
 * [Merge Sort](http://en.wikipedia.org/wiki/Merge_sort)
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
 * *More coming soon!*

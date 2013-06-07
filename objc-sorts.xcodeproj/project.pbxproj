@@ -33,6 +33,7 @@
 		884689701761238A00721B97 /* objc_sorts.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = objc_sorts.1; sourceTree = "<group>"; };
 		88468977176129B000721B97 /* merge_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merge_sort.h; sourceTree = "<group>"; };
 		88468978176129B000721B97 /* quick_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quick_sort.h; sourceTree = "<group>"; };
+		88468979176169DA00721B97 /* selection_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selection_sort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 				8846896C1761238A00721B97 /* main.m */,
 				88468977176129B000721B97 /* merge_sort.h */,
 				88468978176129B000721B97 /* quick_sort.h */,
+				88468979176169DA00721B97 /* selection_sort.h */,
 				8846896E1761238A00721B97 /* Supporting Files */,
 			);
 			path = "objc-sorts";
@@ -246,6 +248,7 @@
 				884689761761238A00721B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

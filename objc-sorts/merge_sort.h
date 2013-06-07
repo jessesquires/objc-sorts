@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Hexed Bits. All rights reserved.
 //
 
-#ifndef scratch_mergesort_h
-#define scratch_mergesort_h
+#ifndef objc_sorts_mergesort_h
+#define objc_sorts_mergesort_h
 
 NSMutableArray* merge(NSMutableArray *left, NSMutableArray *right)
 {

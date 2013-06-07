@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "merge_sort.h"
 #import "quick_sort.h"
+#import "selection_sort.h"
 
-#define MAX_COUNT 3000
+#define MAX_COUNT 10000
 
 NSMutableArray* randomNumbersArray()
 {
@@ -37,7 +38,6 @@ BOOL verfiySorted(NSMutableArray *arr)
             return NO;
         }
     }
-    
     NSLog(@"List is sorted!");
     return YES;
 }
@@ -57,6 +57,11 @@ int main(int argc, const char * argv[])
         NSLog(@"\n\nRunning merge sort...");
         NSMutableArray *msarr = merge_sort(unsorted);
         verfiySorted(msarr);
+        
+        NSLog(@"\n\nRunning selection sort...");
+        NSMutableArray *ssarr = [unsorted mutableCopy];
+        selection_sort(ssarr);
+        verfiySorted(ssarr);
     }
     return 0;
 }

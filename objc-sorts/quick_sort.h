@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Hexed Bits. All rights reserved.
 //
 
-#ifndef scratch_quicksort_h
-#define scratch_quicksort_h
+#ifndef objc_sorts_quicksort_h
+#define objc_sorts_quicksort_h
 
 NSUInteger partition(NSMutableArray *arr, NSUInteger left, NSUInteger right)
 {
