@@ -9,57 +9,51 @@
 #ifndef objc_sorts_mergesort_h
 #define objc_sorts_mergesort_h
 
-NSMutableArray* merge(NSMutableArray *left, NSMutableArray *right)
+void merge(NSMutableArray *arr, NSUInteger first, NSUInteger mid, NSUInteger last)
 {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
+    NSMutableArray *tempArr = [[NSMutableArray alloc] init];
+    NSUInteger indexA = first;
+    NSUInteger indexB = mid;
     
-    while(left.count > 0 || right.count > 0) {
+    while(indexA < mid && indexB < last) {
+        NSNumber *numA = [arr objectAtIndex:indexA];
+        NSNumber *numB = [arr objectAtIndex:indexB];
         
-        if(left.count > 0 && right.count > 0) {
-            
-            NSInteger leftFirst = [[left objectAtIndex:0] integerValue];
-            NSInteger rightFirst = [[right objectAtIndex:0] integerValue];
-            
-            if(leftFirst <= rightFirst) {
-                [result addObject:[left objectAtIndex:0]];
-                [left removeObjectAtIndex:0];
-            }
-            else {
-                [result addObject:[right objectAtIndex:0]];
-                [right removeObjectAtIndex:0];
-            }
+        if(numA.integerValue < numB.integerValue) {
+            [tempArr addObject:numA];
+            indexA++;
         }
-        else if(left.count > 0) {
-            [result addObject:[left objectAtIndex:0]];
-            [left removeObjectAtIndex:0];
-        }
-        else if(right.count > 0) {
-            [result addObject:[right objectAtIndex:0]];
-            [right removeObjectAtIndex:0];
+        else {
+            [tempArr addObject:numB];
+            indexB++;
         }
     }
-    return result;
+    
+    while(indexA < mid) {
+        [tempArr addObject:[arr objectAtIndex:indexA]];
+        indexA++;
+    }
+    
+    while(indexB < last) {
+        [tempArr addObject:[arr objectAtIndex:indexB]];
+        indexB++;
+    }
+    
+    indexA = first;
+    for(NSUInteger i = 0; i < tempArr.count; i++) {
+        [arr replaceObjectAtIndex:indexA withObject:[tempArr objectAtIndex:i]];
+        indexA++;
+    }
 }
 
-NSMutableArray* merge_sort(NSMutableArray *arr)
+void merge_sort(NSMutableArray *arr, NSUInteger first, NSUInteger last)
 {
-    if(arr.count <= 1)
-        return arr;
-    
-    NSMutableArray *left = [[NSMutableArray alloc] init];
-    NSMutableArray *right = [[NSMutableArray alloc] init];
-    NSUInteger middle = (arr.count / 2);
-    
-    for(NSUInteger i = 0; i < middle; i++)
-        [left addObject:[arr objectAtIndex:i]];
-    
-    for(NSUInteger i = middle; i < arr.count; i++)
-        [right addObject:[arr objectAtIndex:i]];
-    
-    left = merge_sort(left);
-    right = merge_sort(right);
-    
-    return merge(left, right);
+    if(first + 1 < last) {
+        NSUInteger mid = (first + last) / 2;
+        merge_sort(arr, first, mid);
+        merge_sort(arr, mid, last);
+        merge(arr, first, mid, last);
+    }
 }
 
 #endif

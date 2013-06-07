@@ -61,8 +61,9 @@ int main(int argc, const char * argv[])
         NSLog(@"Quick sort DONE: %lf", end);
         
         NSLog(@"\n\nRunning merge sort...");
+        NSMutableArray *msarr = [unsorted mutableCopy];
         start = [NSDate date];
-        NSMutableArray *msarr = merge_sort(unsorted);
+        merge_sort(msarr, 0, msarr.count);
         end = [start timeIntervalSinceNow] * -1;
         verfiySorted(msarr);
         NSLog(@"Merge sort DONE: %lf", end);
