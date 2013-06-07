@@ -49,19 +49,31 @@ int main(int argc, const char * argv[])
         NSMutableArray *unsorted = randomNumbersArray();
         verfiySorted(unsorted);
         
+        NSDate *start = nil;
+        NSTimeInterval end = 0;
+        
         NSLog(@"\n\nRunning quick sort...");
         NSMutableArray *qsarr = [unsorted mutableCopy];
+        start = [NSDate date];
         quick_sort(qsarr, 0, qsarr.count - 1);
+        end = [start timeIntervalSinceNow] * -1;
         verfiySorted(qsarr);
+        NSLog(@"Quick sort DONE: %lf", end);
         
         NSLog(@"\n\nRunning merge sort...");
+        start = [NSDate date];
         NSMutableArray *msarr = merge_sort(unsorted);
+        end = [start timeIntervalSinceNow] * -1;
         verfiySorted(msarr);
+        NSLog(@"Merge sort DONE: %lf", end);
         
         NSLog(@"\n\nRunning selection sort...");
         NSMutableArray *ssarr = [unsorted mutableCopy];
+        start = [NSDate date];
         selection_sort(ssarr);
+        end = [start timeIntervalSinceNow] * -1;
         verfiySorted(ssarr);
+        NSLog(@"Selection sort DONE: %lf", end);
     }
     return 0;
 }
