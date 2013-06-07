@@ -23,9 +23,7 @@ NSUInteger partition(NSMutableArray *arr, NSUInteger left, NSUInteger right)
             j--;
         
         if(i <= j) {
-            NSNumber *temp = [arr objectAtIndex:i];
-            [arr setObject:[arr objectAtIndex:j] atIndexedSubscript:i];
-            [arr setObject:temp atIndexedSubscript:j];
+            [arr exchangeObjectAtIndex:i withObjectAtIndex:j];
             i++;
             
             if(j > 0)
