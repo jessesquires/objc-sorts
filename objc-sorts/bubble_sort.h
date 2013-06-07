@@ -17,12 +17,8 @@ void bubble_sort(NSMutableArray *arr)
         swapped = NO;
         
         for(int i = 0; i < arr.count - 1; i++) {
-            NSNumber *numA = [arr objectAtIndex:i];
-            NSNumber *numB = [arr objectAtIndex:i + 1];
-            
-            if(numA.integerValue > numB.integerValue) {
-                [arr replaceObjectAtIndex:i withObject:numB];
-                [arr replaceObjectAtIndex:i + 1 withObject:numA];
+            if([[arr objectAtIndex:i] integerValue] > [[arr objectAtIndex:i + 1] integerValue]) {
+                [arr exchangeObjectAtIndex:i withObjectAtIndex:i + 1];
                 swapped = YES;
             }
         }
