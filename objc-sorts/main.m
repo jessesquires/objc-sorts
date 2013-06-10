@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "sort_utils.h"
-#import "merge_sort.h"
 #import "quick_sort.h"
+#import "heap_sort.h"
+#import "merge_sort.h"
 #import "selection_sort.h"
 #import "insertion_sort.h"
 #import "bubble_sort.h"
@@ -25,6 +26,8 @@ int main(int argc, const char * argv[])
         NSLog(@"--------------------");
         
         test_quick_sort([unsorted mutableCopy]);
+        
+        test_heap_sort([unsorted mutableCopy]);
         
         test_merge_sort([unsorted mutableCopy]);
         

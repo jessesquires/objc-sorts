@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		883FA8F8176610F100768491 /* heap_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heap_sort.h; sourceTree = "<group>"; };
 		884689661761238A00721B97 /* objc-sorts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objc-sorts"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884689691761238A00721B97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8846896C1761238A00721B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				88A0F9D71761897700F818C5 /* bubble_sort.h */,
+				883FA8F8176610F100768491 /* heap_sort.h */,
 				88A0F9D817618D1A00F818C5 /* insertion_sort.h */,
 				8846896C1761238A00721B97 /* main.m */,
 				88468977176129B000721B97 /* merge_sort.h */,
