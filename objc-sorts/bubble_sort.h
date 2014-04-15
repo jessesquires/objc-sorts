@@ -14,16 +14,18 @@
 void bubble_sort(NSMutableArray *arr)
 {
     BOOL swapped = YES;
+    int k = 0;
     
     while(swapped) {
         swapped = NO;
         
-        for(int i = 0; i < arr.count - 1; i++) {
+        for(int i = 0; i < arr.count - 1 - k; i++) {
             if([[arr objectAtIndex:i] integerValue] > [[arr objectAtIndex:i + 1] integerValue]) {
                 [arr exchangeObjectAtIndex:i withObjectAtIndex:i + 1];
                 swapped = YES;
             }
         }
+        k++;
     }
 }
 
