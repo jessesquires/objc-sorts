@@ -1,9 +1,11 @@
 //
-//  quick_sort.h
-//  objc-sorts
+//  Jesse Squires
+//  http://www.hexedbits.com
 //
-//  Created by Jesse Squires on 6/6/13.
-//  Copyright (c) 2013 Hexed Bits. All rights reserved.
+//  GitHub
+//  https://github.com/jessesquires/objc-sorts
+//
+//  Copyright (c) 2014 Jesse Squires
 //
 
 #import "sort_utils.h"

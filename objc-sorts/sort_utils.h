@@ -1,9 +1,11 @@
 //
-//  sort_utils.h
-//  objc-sorts
+//  Jesse Squires
+//  http://www.hexedbits.com
 //
-//  Created by Jesse Squires on 6/7/13.
-//  Copyright (c) 2013 Hexed Bits. All rights reserved.
+//  GitHub
+//  https://github.com/jessesquires/objc-sorts
+//
+//  Copyright (c) 2014 Jesse Squires
 //
 
 #ifndef objc_sorts_sort_utils_h
