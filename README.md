@@ -2,7 +2,7 @@
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objective-C.
 
-Each sorting algorithm is executed on a list of [10,000 randomly generated numbers](http://cdn.memegenerator.net/instances/400x/38499495.jpg) and verified.
+Each sorting algorithm is executed on a list of 1,000,000 randomly generated numbers and verified.
 
 Execution time for each algorithm is logged for comparison.
 
