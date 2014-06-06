@@ -8,6 +8,8 @@ Execution time for each algorithm is logged for comparison.
 
 You can find sweet sorting animations [here](http://www.sorting-algorithms.com).
 
+**See: [Swift Sorts](https://github.com/jessesquires/swift-sorts) for comparison!**
+
 ## Algorithms
 
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
