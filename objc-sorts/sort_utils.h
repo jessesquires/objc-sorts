@@ -11,7 +11,7 @@
 #ifndef objc_sorts_sort_utils_h
 #define objc_sorts_sort_utils_h
 
-#define MAX_COUNT 10000
+#define MAX_COUNT 100000
 
 NSMutableArray* randomNumbersArray()
 {
