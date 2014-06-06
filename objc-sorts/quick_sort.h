@@ -5,7 +5,7 @@
 //  GitHub
 //  https://github.com/jessesquires/objc-sorts
 //
-//  Copyright (c) 2014 Jesse Squires
+//  Copyright (c) Jesse Squires
 //
 
 #import "sort_utils.h"
@@ -19,19 +19,23 @@ NSUInteger partition(NSMutableArray *arr, NSUInteger left, NSUInteger right)
     NSUInteger j = right;
     NSInteger pivot = [[arr objectAtIndex:(left + right) / 2] integerValue];
     
-    while(i <= j) {
-        while([[arr objectAtIndex:i] integerValue] < pivot)
-            i++;
+    while (i <= j) {
         
-        while(j > 0 && [[arr objectAtIndex:j] integerValue] > pivot)
+        while ([[arr objectAtIndex:i] integerValue] < pivot) {
+            i++;
+        }
+        
+        while (j > 0 && [[arr objectAtIndex:j] integerValue] > pivot) {
             j--;
+        }
         
         if(i <= j) {
             [arr exchangeObjectAtIndex:i withObjectAtIndex:j];
             i++;
             
-            if(j > 0)
+            if(j > 0) {
                 j--;
+            }
         }
     }
     return i;
@@ -41,21 +45,23 @@ void quick_sort(NSMutableArray *arr, NSUInteger left, NSUInteger right)
 {
     NSUInteger index = partition(arr, left, right);
     
-    if(left < index - 1)
+    if (left < index - 1) {
         quick_sort(arr, left, index - 1);
+    }
     
-    if(index < right)
+    if (index < right) {
         quick_sort(arr, index, right);
+    }
 }
 
 void test_quick_sort(NSMutableArray *arr)
 {
-    NSLog(@"\n\nRunning quick sort...");
+    NSLog(@"Running quick sort...");
     NSDate *start = [NSDate date];
     quick_sort(arr, 0, arr.count - 1);
     NSTimeInterval end = [start timeIntervalSinceNow] * -1;
     verfiySorted(arr);
-    NSLog(@"Quick sort DONE: %lf", end);
+    NSLog(@"Quick sort finished in %lf sec\n\n", end);
 }
 
 #endif

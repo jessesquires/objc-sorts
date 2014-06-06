@@ -5,11 +5,13 @@
 //  GitHub
 //  https://github.com/jessesquires/objc-sorts
 //
-//  Copyright (c) 2014 Jesse Squires
+//  Copyright (c) Jesse Squires
 //
 
 #import <Foundation/Foundation.h>
+
 #import "sort_utils.h"
+
 #import "quick_sort.h"
 #import "heap_sort.h"
 #import "merge_sort.h"
@@ -20,12 +22,10 @@
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
-        NSLog(@"Generating random list of %d numbers...", MAX_COUNT);
         NSMutableArray *unsorted = randomNumbersArray();
         verfiySorted(unsorted);
         
-        NSLog(@"SORT ALL THE THINGS!");
-        NSLog(@"--------------------");
+        NSLog(@"-----------------\n\n");
         
         test_quick_sort([unsorted mutableCopy]);
         

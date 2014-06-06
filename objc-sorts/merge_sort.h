@@ -5,7 +5,7 @@
 //  GitHub
 //  https://github.com/jessesquires/objc-sorts
 //
-//  Copyright (c) 2014 Jesse Squires
+//  Copyright (c) Jesse Squires
 //
 
 #import "sort_utils.h"
@@ -19,11 +19,11 @@ void merge(NSMutableArray *arr, NSUInteger first, NSUInteger mid, NSUInteger las
     NSUInteger indexA = first;
     NSUInteger indexB = mid;
     
-    while(indexA < mid && indexB < last) {
+    while (indexA < mid && indexB < last) {
         NSNumber *numA = [arr objectAtIndex:indexA];
         NSNumber *numB = [arr objectAtIndex:indexB];
         
-        if(numA.integerValue < numB.integerValue) {
+        if (numA.integerValue < numB.integerValue) {
             [tempArr addObject:numA];
             indexA++;
         }
@@ -33,18 +33,18 @@ void merge(NSMutableArray *arr, NSUInteger first, NSUInteger mid, NSUInteger las
         }
     }
     
-    while(indexA < mid) {
+    while (indexA < mid) {
         [tempArr addObject:[arr objectAtIndex:indexA]];
         indexA++;
     }
     
-    while(indexB < last) {
+    while (indexB < last) {
         [tempArr addObject:[arr objectAtIndex:indexB]];
         indexB++;
     }
     
     indexA = first;
-    for(NSUInteger i = 0; i < tempArr.count; i++) {
+    for (NSUInteger i = 0; i < tempArr.count; i++) {
         [arr replaceObjectAtIndex:indexA withObject:[tempArr objectAtIndex:i]];
         indexA++;
     }
@@ -52,7 +52,7 @@ void merge(NSMutableArray *arr, NSUInteger first, NSUInteger mid, NSUInteger las
 
 void merge_sort(NSMutableArray *arr, NSUInteger first, NSUInteger last)
 {
-    if(first + 1 < last) {
+    if (first + 1 < last) {
         NSUInteger mid = (first + last) / 2;
         merge_sort(arr, first, mid);
         merge_sort(arr, mid, last);
@@ -62,12 +62,12 @@ void merge_sort(NSMutableArray *arr, NSUInteger first, NSUInteger last)
 
 void test_merge_sort(NSMutableArray *arr)
 {
-    NSLog(@"\n\nRunning merge sort...");
+    NSLog(@"Running merge sort...");
     NSDate *start = [NSDate date];
     merge_sort(arr, 0, arr.count);
     NSTimeInterval end = [start timeIntervalSinceNow] * -1;
     verfiySorted(arr);
-    NSLog(@"Merge sort DONE: %lf", end);
+    NSLog(@"Merge sort finished in %lf sec\n\n", end);
 }
 
 #endif
