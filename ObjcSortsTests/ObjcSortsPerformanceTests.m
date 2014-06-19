@@ -13,33 +13,76 @@
 #import "sorts.h"
 #import "sortUtils.h"
 
+static const int kMaxCount = 1000;
+
 
 @interface ObjcSortsPerformanceTests : XCTestCase
+
+@property (strong, nonatomic) NSMutableArray *randomArray;
 
 @end
 
 
 @implementation ObjcSortsPerformanceTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.randomArray = randomIntegerArray(kMaxCount);
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)tearDown
+{
+    self.randomArray = nil;
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testObjcSortPerformance
+{
+    [self measureBlock:^{
+        objcSort(self.randomArray);
+    }];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
+- (void)testQuickSortPerformance
+{
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        quickSort(self.randomArray);
+    }];
+}
+
+- (void)testHeapSortPerformance
+{
+    [self measureBlock:^{
+        heapSort(self.randomArray);
+    }];
+}
+
+- (void)testInsertionSortPerformance
+{
+    [self measureBlock:^{
+        insertionSort(self.randomArray);
+    }];
+}
+
+- (void)testSelectionSortPerformance
+{
+    [self measureBlock:^{
+        selectionSort(self.randomArray);
+    }];
+}
+
+- (void)testMergeSortPerformance
+{
+    [self measureBlock:^{
+        mergeSort(self.randomArray);
+    }];
+}
+
+- (void)testBubbleSortPerformance
+{
+    [self measureBlock:^{
+        bubbleSort(self.randomArray);
     }];
 }
 

@@ -12,6 +12,8 @@
 		8804234F1952A38800AF1AE9 /* ObjcSortsPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804234E1952A38800AF1AE9 /* ObjcSortsPerformanceTests.m */; };
 		880423521952A40E00AF1AE9 /* sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 880423511952A40E00AF1AE9 /* sorts.m */; };
 		880423551952A89300AF1AE9 /* sortUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 880423541952A89300AF1AE9 /* sortUtils.m */; };
+		880423561952B85C00AF1AE9 /* sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 880423511952A40E00AF1AE9 /* sorts.m */; };
+		880423571952B85C00AF1AE9 /* sortUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 880423541952A89300AF1AE9 /* sortUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -202,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880423561952B85C00AF1AE9 /* sorts.m in Sources */,
+				880423571952B85C00AF1AE9 /* sortUtils.m in Sources */,
 				8804234F1952A38800AF1AE9 /* ObjcSortsPerformanceTests.m in Sources */,
 				8804234A19529F4300AF1AE9 /* ObjcSortsTests.m in Sources */,
 			);

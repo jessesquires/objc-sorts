@@ -16,31 +16,75 @@
 
 @interface ObjcSortsTests : XCTestCase
 
+@property (strong, nonatomic) NSArray *sortedArray;
+@property (strong, nonatomic) NSMutableArray *unsortedArray;
+
 @end
 
 
 @implementation ObjcSortsTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.sortedArray = [NSArray arrayWithObjects:@0, @1, @4, @10, @23, @34, @34, @35, @75, @87, @98, @687, @809, @9324, nil];
+    self.unsortedArray = [NSMutableArray arrayWithObjects:@23, @87, @1, @0, @34, @687, @34, @75, @10, @9324, @809, @98, @35, @4, nil];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)tearDown
+{
+    self.sortedArray = nil;
+    self.unsortedArray = nil;
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testObjcSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    objcSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testQuickSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    quickSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
+}
+
+- (void)testHeapSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    heapSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
+}
+
+- (void)testInsertionSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    insertionSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
+}
+
+- (void)testSelectionSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    selectionSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
+}
+
+- (void)testMergeSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    mergeSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
+}
+
+- (void)testBubbleSort
+{
+    XCTAssertFalse([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should not be equal before sorting");
+    bubbleSort(self.unsortedArray);
+    XCTAssertTrue([self.sortedArray isEqualToArray:self.unsortedArray], @"Arrays should be equal before sorting");
 }
 
 @end
