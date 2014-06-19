@@ -29,5 +29,5 @@ BOOL arrayIsSorted(NSMutableArray *arr);
 NSString* sortAlgorithmNameForType(SortAlgorithmType type);
 
 NSTimeInterval sortArrayWithNameUsingBlock(NSMutableArray *anArray,
-                                           SortAlgorithmType sortName,
+                                           SortAlgorithmType sortType,
                                            SortAlgorithmBlock sortBlock);
