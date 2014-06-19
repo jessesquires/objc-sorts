@@ -10,6 +10,8 @@
 		8804233B19529F2000AF1AE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804233A19529F2000AF1AE9 /* main.m */; };
 		8804234A19529F4300AF1AE9 /* ObjcSortsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804234919529F4300AF1AE9 /* ObjcSortsTests.m */; };
 		8804234F1952A38800AF1AE9 /* ObjcSortsPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8804234E1952A38800AF1AE9 /* ObjcSortsPerformanceTests.m */; };
+		880423521952A40E00AF1AE9 /* sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 880423511952A40E00AF1AE9 /* sorts.m */; };
+		880423551952A89300AF1AE9 /* sortUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 880423541952A89300AF1AE9 /* sortUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		8804234819529F4300AF1AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8804234919529F4300AF1AE9 /* ObjcSortsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcSortsTests.m; sourceTree = "<group>"; };
 		8804234E1952A38800AF1AE9 /* ObjcSortsPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcSortsPerformanceTests.m; sourceTree = "<group>"; };
+		880423501952A40E00AF1AE9 /* sorts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sorts.h; sourceTree = "<group>"; };
+		880423511952A40E00AF1AE9 /* sorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sorts.m; sourceTree = "<group>"; };
+		880423531952A89300AF1AE9 /* sortUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sortUtils.h; sourceTree = "<group>"; };
+		880423541952A89300AF1AE9 /* sortUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sortUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				8804233A19529F2000AF1AE9 /* main.m */,
+				880423501952A40E00AF1AE9 /* sorts.h */,
+				880423511952A40E00AF1AE9 /* sorts.m */,
+				880423531952A89300AF1AE9 /* sortUtils.h */,
+				880423541952A89300AF1AE9 /* sortUtils.m */,
 			);
 			path = ObjcSorts;
 			sourceTree = "<group>";
@@ -183,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8804233B19529F2000AF1AE9 /* main.m in Sources */,
+				880423551952A89300AF1AE9 /* sortUtils.m in Sources */,
+				880423521952A40E00AF1AE9 /* sorts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

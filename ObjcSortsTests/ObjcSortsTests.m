@@ -10,6 +10,9 @@
 
 #import <XCTest/XCTest.h>
 
+#import "sorts.h"
+#import "sortUtils.h"
+
 
 @interface ObjcSortsTests : XCTestCase
 
