@@ -39,6 +39,11 @@ static const int kMaxCount = 1000;
 
 - (void)testObjcSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         objcSort(self.randomArray);
     }];
@@ -46,6 +51,11 @@ static const int kMaxCount = 1000;
 
 - (void)testQuickSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         quickSort(self.randomArray);
     }];
@@ -53,6 +63,11 @@ static const int kMaxCount = 1000;
 
 - (void)testHeapSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         heapSort(self.randomArray);
     }];
@@ -60,6 +75,11 @@ static const int kMaxCount = 1000;
 
 - (void)testInsertionSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         insertionSort(self.randomArray);
     }];
@@ -67,6 +87,11 @@ static const int kMaxCount = 1000;
 
 - (void)testSelectionSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         selectionSort(self.randomArray);
     }];
@@ -74,6 +99,11 @@ static const int kMaxCount = 1000;
 
 - (void)testMergeSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         mergeSort(self.randomArray);
     }];
@@ -81,6 +111,11 @@ static const int kMaxCount = 1000;
 
 - (void)testBubbleSortPerformance
 {
+    if (![self respondsToSelector:@selector(measureBlock:)]) {
+        // Travis-CI does not yet support Xcode6 :(
+        return;
+    }
+    
     [self measureBlock:^{
         bubbleSort(self.randomArray);
     }];
