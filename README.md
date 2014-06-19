@@ -1,14 +1,8 @@
-## Objective-C Sorts
+## Objective-C Sorts [![Build Status](https://travis-ci.org/jessesquires/objc-sorts.svg)](http://travis-ci.org/jessesquires/objc-sorts)
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objective-C.
 
 **See [Swift Sorts](https://github.com/jessesquires/swift-sorts) for comparison!**
-
-Each sorting algorithm is executed on a list of 10,000 randomly generated numbers and verified.
-
-Execution time for each algorithm is logged for comparison.
-
-You can find sweet sorting animations [here](http://www.sorting-algorithms.com).
 
 ## Algorithms
 
