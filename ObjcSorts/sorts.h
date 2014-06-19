@@ -14,10 +14,10 @@ void selectionSort(NSMutableArray *arr);
 
 void insertionSort(NSMutableArray *arr);
 
-void mergeSort(NSMutableArray *arr);
-
 void heapSort(NSMutableArray *arr);
 
 void quickSort(NSMutableArray *arr);
+
+void mergeSort(NSMutableArray *arr);
 
 void bubbleSort(NSMutableArray *arr);

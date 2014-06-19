@@ -9,3 +9,25 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef void (^SortAlgorithmBlock)(NSMutableArray *arr);
+
+typedef NS_ENUM(NSUInteger, SortAlgorithmType) {
+    SortAlgorithmTypeObjC,
+    SortAlgorithmTypeQuick,
+    SortAlgorithmTypeHeap,
+    SortAlgorithmTypeInsertion,
+    SortAlgorithmTypeSelection,
+    SortAlgorithmTypeMerge,
+    SortAlgorithmTypeBubble
+};
+
+NSMutableArray* randomIntegerArray(NSUInteger count);
+
+BOOL arrayIsSorted(NSMutableArray *arr);
+
+NSString* sortAlgorithmNameForType(SortAlgorithmType type);
+
+NSTimeInterval sortArrayWithNameUsingBlock(NSMutableArray *anArray,
+                                           SortAlgorithmType sortName,
+                                           SortAlgorithmBlock sortBlock);
