@@ -94,7 +94,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n\nFinal Results:\n--------------");
         
         [averageSortTimes enumerateKeysAndObjectsUsingBlock:^(NSNumber *sortType, NSNumber *time, BOOL *stop) {
-            NSLog(@"%@ sort average time = %lf sec", sortAlgorithmNameForType(sortType.integerValue), time.doubleValue);
+            NSLog(@"%@ sort average time = %lf sec", sortAlgorithmNameForType(sortType.integerValue), time.doubleValue / NUM_TRIALS);
         }];
         
         NSLog(@"\n");
