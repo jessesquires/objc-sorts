@@ -1,4 +1,4 @@
-## Objective-C Sorts [![Build Status](https://travis-ci.org/jessesquires/objc-sorts.svg)](http://travis-ci.org/jessesquires/objc-sorts)
+## Objective-C Sorts
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objective-C.
 
