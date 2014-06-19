@@ -6,6 +6,7 @@ A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objec
 
 ## Algorithms
 
+* Cocoa `sortUsingComparator:`
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
 * [Heap Sort](http://en.wikipedia.org/wiki/Heapsort)
 * [Merge Sort](http://en.wikipedia.org/wiki/Merge_sort)
