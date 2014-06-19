@@ -10,6 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
+void objcSort(NSMutableArray *arr);
+
 void selectionSort(NSMutableArray *arr);
 
 void insertionSort(NSMutableArray *arr);

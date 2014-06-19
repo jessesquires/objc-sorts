@@ -10,6 +10,13 @@
 
 #import "sorts.h"
 
+void objcSort(NSMutableArray *arr)
+{
+    [arr sortUsingComparator:^NSComparisonResult(NSNumber *n1, NSNumber *n2) {
+        return [n1 compare:n2];
+    }];
+}
+
 void selectionSort(NSMutableArray *arr)
 {
     NSUInteger minIndex = 0;
