@@ -2,11 +2,13 @@
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Objective-C.
 
-Read the blog post: [Apples to apples](http://www.jessesquires.com/apples-to-apples/) and see [Swift Sorts](https://github.com/jessesquires/swift-sorts) for comparison.
+Read the blog posts [Apples to apples](http://www.jessesquires.com/apples-to-apples/) and [Apples to apples, Part II](http://www.jessesquires.com/apples-to-apples-part-two/).
+ 
+See [Swift Sorts](https://github.com/jessesquires/swift-sorts) for comparison.
 
 ## Algorithms
 
-* Cocoa `sortUsingComparator:`
+* Cocoa `NSMutableArray : sortUsingComparator:`
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
 * [Heap Sort](http://en.wikipedia.org/wiki/Heapsort)
 * [Merge Sort](http://en.wikipedia.org/wiki/Merge_sort)
