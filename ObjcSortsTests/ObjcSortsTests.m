@@ -27,8 +27,8 @@
 - (void)setUp
 {
     [super setUp];
-    self.sortedArray = [NSArray arrayWithObjects:@0, @1, @4, @10, @23, @34, @34, @35, @75, @87, @98, @687, @809, @9324, nil];
-    self.unsortedArray = [NSMutableArray arrayWithObjects:@23, @87, @1, @0, @34, @687, @34, @75, @10, @9324, @809, @98, @35, @4, nil];
+    self.sortedArray = [NSArray arrayWithObjects:@0, @1, @4, @10, @23, @34, @34, @35, @66, @75, @87, @98, @687, @809, @9324, nil];
+    self.unsortedArray = [NSMutableArray arrayWithObjects:@23, @87, @1, @0, @34, @687, @34, @75, @10, @9324, @809, @98, @35, @4, @66, nil];
 }
 
 - (void)tearDown
