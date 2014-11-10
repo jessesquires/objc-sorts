@@ -5,4 +5,5 @@ before_install:
 - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 
 script: 
-- xctool clean build test -project ObjcSorts.xcodeproj -scheme ObjcSortsRelease
+- xctool clean build -project ObjcSorts.xcodeproj -scheme ObjcSortsRelease
+- xctool test -project ObjcSorts.xcodeproj -scheme ObjcSortsTests
