@@ -1,9 +1,9 @@
 language: objective-c
 osx_image: xcode7.3
 
-script: 
+script:
 - xctool clean build -project ObjcSorts.xcodeproj -scheme ObjcSortsRelease
-- xctool test -project ObjcSorts.xcodeproj -scheme ObjcSortsTests
+- xctool test -project ObjcSorts.xcodeproj -scheme ObjcSortsTests GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
